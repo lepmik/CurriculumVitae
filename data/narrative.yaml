@@ -1,0 +1,97 @@
+# narrative.yaml — free-text narrative content for all CV templates
+# Edit here; no template edits needed.
+# Citekeys: write [citekey] and build.py resolves to [rcn_num] automatically.
+
+# ── Industry CV ───────────────────────────────────────────────────────────────
+
+industry_summary: >
+  Senior Research Scientist and technical leader combining deep technical expertise with proven
+  ability to rapidly master and innovate with new technologies. Track record of building and
+  leading cross-disciplinary teams, building novel technical solutions from scratch, including
+  full-stack research platforms and AI systems. Experience spans cutting-edge AI research,
+  hands-on development, and building and leading technical teams of multi-million NOK
+  portfolios---strong focus on building novel AI systems.
+
+key_achievements:
+  - "Published in top ML/AI conferences and journals"
+  - "Interviewed on the top AI podcast, MLST, for groundbreaking work on the ARC-AGI challenge"
+  - "Led multiple technical workshops on scientific computing and AI"
+
+selected_projects:
+  - "Deep learning for drug discovery using heart-on-a-chip technology"
+  - "Bio-inspired AI architectures and representation learning for spatial navigation and robustness"
+  - "Development of neural cellular automata for active learning and memory systems"
+  - "Large-scale bio-inspired neural network simulations"
+  - "Causal modeling and inference systems"
+  - "Designed and built a complete research platform integrating analysis tools and pipelines for neural data processing, real-time experimental control, and data acquisition systems"
+  - "Established coding standards and best practices, adopted across research groups"
+  - "Implemented cutting-edge AI architectures from recent literature"
+  - "Developed custom embedded systems for home automation (IoT plant watering system and furniture control)"
+
+# ── RCN CV ────────────────────────────────────────────────────────────────────
+
+career_breaks:
+  - year: "2017, 2020"
+    reason: "Parental leave, 5 months each"
+
+track_record_intro: >
+  My research bridges neuroscience and AI in both directions: using principles of brain function
+  to build better AI systems, and using AI to deepen our understanding of neural computation.
+  I have published \textbf{26 peer-reviewed articles} (727 total citations, h-index 10, Google Scholar
+  2026), including in NeurIPS, Nature Communications, Science Advances, eLife, PLOS Computational
+  Biology, and iScience. Since 2020 I have founded and led the BioAI group at Simula Research
+  Laboratory, growing it to 11 researchers (1 postdoc, 10 PhD students) and managing a portfolio
+  of $\sim$4.5\,MNOK/year. I received the \textbf{NORA Early Career Investigator Award in AI 2025}.
+  I have actively mentored the next generation: four MSc alumni have gone on to PhD programmes
+  at Simula, the University of Oslo, and Stanford University.
+
+pub_narrative_nca: >
+  Recently, I have developed and investigated Neural Cellular Automata (NCAs),
+  inspired by principles of brain function. This work includes the discovery of
+  emergent attention and scalability in active NCAs [sensor_nca], developmental
+  solutions for abstract reasoning using ARC-NCA [arc_nca], and modeling memory
+  transfer with EngramNCA [engram_nca]. [arc_nca] is featured in the MLST podcast.
+
+pub_narrative_spatial_nav: >
+  Since founding the BioAI group, a central focus has been AI models of spatial navigation.
+  We showed that grid-cell geometry is governed by conformal isometry [schoyen2025] (PLOS CB),
+  that place cells and contextual remapping emerge from decoding a cognitive map [pettersen2024_elife]
+  (eLife), and that toroidal topology -- not grid cells per se -- drives coherent remapping
+  [schoyen2023] (iScience, 24 cit.). Collectively these works establish a unified
+  computational framework for how the brain encodes space.
+
+pub_narrative_causal: >
+  Beginning in 2018 with Konrad Kording I developed quasi-experimental methods for causal
+  inference in neuroscience [lepperoD2022_causal] (PLOS CB, 25 cit.). This method was
+  directly adopted by Pospisil et al.\ (2024) to map the fruit-fly brain effectome
+  (\textit{Nature}, V\,634, P\,201--209), demonstrating the real-world translational impact
+  of the methodology.
+
+pub_narrative_neuroscience: >
+  During my PhD I combined in-vivo electrophysiology with computational methods to make
+  two high-impact contributions to systems neuroscience. Perineuronal nets stabilize the
+  grid cell network [christensen2021] (\textit{Nature Communications}, 94 cit.), identifying
+  a structural plasticity mechanism for spatial memory. Optogenetic pacing of medial septum
+  parvalbumin cells disrupts hippocampal theta oscillations [lepperoD2021_optogenetic]
+  (\textit{Science Advances}, 23 cit.), establishing a causal link between septal drive and
+  network-level temporal coding.
+
+other_qualifications: >
+  I am committed to open science and reproducible research. During my PhD I led the
+  development of a complete data-management platform for neuroscience: three published
+  packages adopted across multiple labs
+  (\href{https://github.com/CINPLA/expipe}{expipe},
+  \href{https://github.com/CINPLA/exdir}{exdir},
+  \href{https://github.com/CINPLA/pyopenephys}{pyopenephys})
+  and a contribution to NEST\,2.12/2.16 (Human Brain Project).
+  I am the recipient of the \textbf{NORA Early Career Investigator Award in AI 2025}.
+  \textbf{Teaching:} Developer and lecturer of \textit{NeuroAI} (Master's/PhD level, UiO,
+  2023--); lecturer at Simula Summer School in Computational Physiology (2022--2023);
+  lecturer in \textit{Computing in Biological Sciences} (UiO, 2015--2020, 25\% FTE).
+
+public_outreach: >
+  Interviewed on MLST podcast on ARC-NCA; Research profile interview by
+  Titan.uio.no (cross-posted digi.no); Two J\o{}ss podcast appearances
+  (${\sim}$4000 listeners); Opinion editorial on AI ethics (digi.no);
+  Interview NRK on optogenetics and depression; Two episodes Brain Inspired
+  podcast (2024).

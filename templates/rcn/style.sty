@@ -1,0 +1,108 @@
+% style.sty — RCN CV style, exact NFR official format
+% A4, 2cm margins, Carlito 11pt (≡ Calibri), single spacing
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{style}[2025/01/01 RCN CV Style]
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[a4paper, top=20mm, bottom=20mm, left=20mm, right=20mm]{geometry}
+\usepackage{microtype}
+\usepackage{setspace}
+\singlespacing
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{amssymb}           % \square, \boxtimes
+\usepackage[hidelinks,colorlinks=true,urlcolor=blue,linkcolor=black]{hyperref}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{longtable}         % page-breakable tables
+\usepackage{tabularx}          % X column for short fixed-height tables
+\usepackage{multirow}
+\usepackage{ragged2e}
+
+% Carlito = metrically compatible with Calibri 11pt
+\usepackage[sfdefault]{carlito}
+\renewcommand{\familydefault}{\sfdefault}
+
+% ── Colours ──────────────────────────────────────────────────────────────────
+\definecolor{rowgray}{HTML}{F2F2F2}
+
+% ── Table rules ──────────────────────────────────────────────────────────────
+\setlength{\arrayrulewidth}{0.4pt}
+\renewcommand{\arraystretch}{1.15}
+\setlength{\tabcolsep}{3pt}
+
+% Zero out longtable's built-in glue so all spacing is explicit
+\setlength{\LTpre}{0pt}
+\setlength{\LTpost}{0pt}
+
+% ── tabularx column type: left-aligned X ─────────────────────────────────────
+\newcolumntype{L}{>{\RaggedRight\arraybackslash}X}
+
+% Section headings
+% before-skip = space above heading, after-skip = space between heading and table
+\titleformat{\section}{\normalsize\bfseries}{}{0em}{}
+\titlespacing{\section}{0pt}{6pt}{2pt}
+
+% Track record heading (Heading 2 in the DOCX = 16pt bold)
+\titleformat{\subsection}{\fontsize{16}{20}\bfseries\selectfont}{}{0em}{}
+\titlespacing{\subsection}{0pt}{8pt}{3pt}
+
+\titleformat{\subsubsection}{\normalsize\bfseries}{}{0em}{}
+\titlespacing{\subsubsection}{0pt}{4pt}{1pt}
+
+% ── Table environments ────────────────────────────────────────────────────────
+% All tables use tabularx with \linewidth so they are exactly the same width.
+% The "L" (X) column fills whatever remains after fixed columns.
+
+% rcntable — page-breakable 2-col table using longtable.
+% Wide column width = \linewidth minus year col, 3 rules, 4 tabcolsep.
+% Computed once at document start into \rcntablewide.
+\newlength{\rcntablewide}
+\AtBeginDocument{%
+  \setlength{\rcntablewide}{\dimexpr\linewidth - 22mm - 3\arrayrulewidth - 4\tabcolsep\relax}%
+}
+
+% Usage: \begin{rcntable}{Left header}{Right header}
+\newenvironment{rcntable}[2]{%
+  \begin{longtable}{|>{\raggedright\arraybackslash}p{22mm}|>{\raggedright\arraybackslash}p{\rcntablewide}|}%
+  \hline
+  \rowcolor{rowgray}\textbf{#1} & \textbf{#2} \\
+  \hline\endhead
+  \hline\endlastfoot
+}{%
+  \end{longtable}\vspace{4pt}%
+}
+
+% Personal information table: 2-col |p{55mm}|L|
+% The date-of-birth/sex row is handled inline with \hfill
+\newenvironment{rcninfo}{%
+  \noindent
+  \tabularx{\linewidth}{|p{55mm}|L|}
+  \hline
+}{%
+  \hline\endtabularx\par\vspace{4pt}%
+}
+
+% Supervision table: 3-col |p{14mm}|p{55mm}|L|
+\newenvironment{rcnsupervision}{%
+  \noindent
+  \tabularx{\linewidth}{|p{14mm}|p{55mm}|L|}
+  \hline
+  \rowcolor{rowgray}
+  \textbf{Master's students} &
+  \textbf{Ph.D.\ students} &
+  \textbf{University/institution -- Country} \\
+  \hline
+}{%
+  \hline\endtabularx\par\vspace{4pt}%
+}
+
+% ── Global spacing ────────────────────────────────────────────────────────────
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlist[enumerate]{nosep, topsep=2pt, itemsep=1pt}
+\setlist[itemize]{nosep, topsep=2pt, itemsep=0pt, label=\textbullet}
+\pagestyle{plain}

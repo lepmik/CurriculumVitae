@@ -1,0 +1,101 @@
+# Grants and project management — newest first
+# status: funded | submitted | not_funded
+
+- title: "SURE-AI: The Norwegian Center for Sustainable, Risk-averse and Ethical AI"
+  funder: "Research Council of Norway (SKI)"
+  role: WP co-lead, core writing group
+  amount: "NOK ~200M total"
+  start: "2025"
+  end: "2033"
+  status: funded
+  description: "National center for AI; Simula as host institution"
+
+- title: "Stable and Efficient Training for Spiking Neural Networks (SPARK)"
+  funder: "Research Council of Norway (Researcher mobility)"
+  role: WP co-lead, core writing group
+  amount: "NOK 9M"
+  start: "2026"
+  end: "2030"
+  status: funded
+  description: "Simula as host institution"
+
+- title: "Exploring Hippocampal Navigation and Memory with Neural Sampling"
+  funder: "SUURPh: Simula UiO UCSD Research PhD Training"
+  role: Supervisor
+  amount: "NOK ~4M"
+  start: "2024"
+  end: "2028"
+  status: funded
+  description: "Simula as host institution"
+
+- title: "PASSION"
+  funder: "Research Council of Norway (IKTPLUSS)"
+  role: Co-PI
+  amount: "NOK 12M"
+  start: "2025"
+  end: ""
+  status: not_funded
+  description: null
+
+- title: "FIND"
+  funder: "Research Council of Norway (FRIPRO)"
+  role: PI
+  amount: "NOK 10M"
+  start: "2025"
+  end: ""
+  status: not_funded
+  description: "Received strong grades (5,6,6,6,7)"
+
+- title: "constrAIn"
+  funder: "Research Council of Norway (IKTPLUSS)"
+  role: PI
+  amount: "NOK 12M"
+  start: "2025"
+  end: ""
+  status: not_funded
+  description: "UiO-led"
+
+- title: "BONXAI"
+  funder: "Research Council of Norway (SKI)"
+  role: WP leader and core writing group
+  amount: "NOK 200M total (NOK 15M to Simula)"
+  start: "2025"
+  end: ""
+  status: not_funded
+  description: null
+
+- title: "reBrAIn"
+  funder: "Research Council of Norway (FRIPRO)"
+  role: PI
+  amount: "NOK 8M"
+  start: "2023"
+  end: ""
+  status: not_funded
+  description: null
+
+- title: "reBrAIn"
+  funder: "Research Council of Norway (TEKNOKONVERGENS)"
+  role: Co-PI
+  amount: "NOK 15M"
+  start: "2022"
+  end: ""
+  status: not_funded
+  description: null
+
+- title: "Bio-AI Research Group"
+  funder: "Simula Research Laboratory (internal)"
+  role: PI
+  amount: "NOK 4.5M/year"
+  start: "2020"
+  end: present
+  status: funded
+  description: "Internal Simula funding for the BioAI group"
+
+- title: "Bio-inspired neural networks for AI application"
+  funder: "Research Council of Norway (IKT+)"
+  role: Acting Co-PI
+  amount: "NOK 16M"
+  start: "2020"
+  end: "2026"
+  status: funded
+  description: "University of Oslo, led by Anders Malthe-Sørenssen. 3 PhD students."

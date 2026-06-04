@@ -1,0 +1,54 @@
+%% style.sty — Classic CV style
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{style}[2025/01/01 Classic CV Style]
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[a4paper, top=18mm, bottom=18mm, left=20mm, right=20mm]{geometry}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{lmodern}
+
+%% ── Colors ────────────────────────────────────────────────────────────────
+\definecolor{accentblue}{RGB}{30,64,175}
+\definecolor{darkgray}{RGB}{55,65,81}
+
+%% ── Section Titles ────────────────────────────────────────────────────────
+\titleformat{\section}
+  {\large\bfseries\color{accentblue}}
+  {}
+  {0pt}
+  {\uppercase}
+  [\vspace{-4pt}\rule{\linewidth}{1pt}\vspace{2pt}]
+
+\titlespacing{\section}{0pt}{14pt}{4pt}
+
+\titleformat{\subsection}
+  {\normalsize\bfseries\color{darkgray}}
+  {}
+  {0pt}
+  {}
+
+\titlespacing{\subsection}{0pt}{8pt}{2pt}
+
+%% ── CV Table ──────────────────────────────────────────────────────────────
+\newenvironment{cvtable}{%
+  \begin{tabular}{@{}>{\raggedright\footnotesize\color{darkgray}}p{2.7cm}
+                      p{\dimexpr\linewidth-3.1cm\relax}@{}}
+}{%
+  \end{tabular}
+}
+
+%% ── Misc ──────────────────────────────────────────────────────────────────
+\setlength{\parindent}{0pt}
+\setlist[enumerate]{nosep, topsep=2pt, itemsep=1pt}
+\setlist[itemize]{nosep, topsep=1pt, itemsep=0pt}
+\pagestyle{plain}
+\hypersetup{colorlinks=true,urlcolor=accentblue,linkcolor=accentblue}

@@ -1,0 +1,38 @@
+# Major collaborations
+- start: "2023"
+  end: "present"
+  description: "Deep learning for drug discovery using heart on a chip"
+  collaborators: "Prof. Aslak Tveito, Research Prof. Samuel Wall and Research Prof. Andy Edwards"
+
+- start: "2023"
+  end: "2023"
+  description: "Normative models of hippocampal activity"
+  collaborators: "Associate Professor Blake Richards, Mila and McGill University"
+  role: "co-principal-investigator, PhD exchange"
+
+- start: "2020"
+  end: "2021"
+  description: "Neuromodulators in AI"
+  collaborators: "Associate Professor Arvind Kumar, KTH, Royal Institute of Technology"
+  role: "co-principal-investigator and co-author"
+
+- start: "2018"
+  end: "present"
+  description: "Causal discovery in the brain"
+  collaborators: "Professor Konrad Kording, University of Pennsylvania"
+  role: "co-principal-investigator and co-author"
+  note: "One co-publication (nr. 2)"
+
+- start: "2017"
+  end: "present"
+  description: "Experimental methods for dissecting spatial navigation"
+  collaborators: "Professor Stefan Leutgeb, University of California San Diego"
+  role: "co-supervisor for visiting PhD students"
+  note: "One co-authored publication (submitted)"
+
+- start: "2016"
+  end: "present"
+  description: "Density methods for simulating spiking neural networks"
+  collaborators: "Professor Marc de Kamps, University of Leeds"
+  role: "co-principal-investigator and co-author"
+  note: "Two publications"

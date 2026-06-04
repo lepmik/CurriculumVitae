@@ -1,0 +1,38 @@
+# Invited talks — sourced from Full CV.md (2025-06-03)
+# Newest first
+
+- date: "2024"
+  title: "Seminar on bio-inspired computing"
+  event: "Simula Research Laboratory"
+  location: "Oslo, Norway"
+  type: invited
+
+- date: "2023"
+  title: "AI and NeuroAI"
+  event: "AI Week, OsloMet"
+  location: "Oslo, Norway"
+  type: invited
+
+- date: "2023"
+  title: "Keynote: Young Researchers in NeuroAI"
+  event: "NeuroAI Conference, NMBU"
+  location: "Ås, Norway"
+  type: keynote
+
+- date: "2022"
+  title: "INC chalk talk"
+  event: "Institute for Neural Computation, University of California San Diego"
+  location: "San Diego, USA"
+  type: invited
+
+- date: "2021"
+  title: "Causal inference in neuroscience"
+  event: "Norwegian Research School of Neuroscience (NRSN) conference"
+  location: "Norway"
+  type: invited
+
+- date: "2021"
+  title: "Guest lecture on causal inference"
+  event: "UiO Physics Department, Honors Program"
+  location: "Oslo, Norway"
+  type: lecture

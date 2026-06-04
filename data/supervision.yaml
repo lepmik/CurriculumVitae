@@ -1,0 +1,106 @@
+# Supervision of PhD students, postdocs, and master's students
+
+phd:
+  - name: Nicolai Haug
+    role: Main supervisor
+    institution: Simula Research Laboratory, Norway
+    start: "2023"
+    end: "2027"
+    status: ongoing
+
+  - name: Markus Pettersen
+    role: Main supervisor
+    institution: Simula Research Laboratory, Norway
+    start: "2022"
+    end: "2026"
+    status: ongoing
+
+  - name: Mia Kvalsund
+    role: Main supervisor
+    institution: University of Oslo, Oslo, Norway
+    start: "2022"
+    end: "2026"
+    status: ongoing
+
+  - name: Konstantin Holzhausen
+    role: Main supervisor
+    institution: University of Oslo, Oslo, Norway
+    start: "2021"
+    end: "2025"
+    status: finished
+
+  - name: Vemund Schøyen
+    role: Main supervisor
+    institution: University of Oslo, Oslo, Norway
+    start: "2020"
+    end: "2024"
+    status: finished
+
+  - name: Mateusz Wasiluk
+    role: Co-supervisor
+    institution: University of Oslo, Oslo, Norway
+    start: "2021"
+    end: "2025"
+    status: ongoing
+
+  - name: Maria Fjelstad
+    role: Co-supervisor
+    institution: University of Oslo, Oslo, Norway
+    start: "2021"
+    end: "2025"
+    status: ongoing
+
+  - name: Krubeal Danieli
+    role: Co-supervisor
+    institution: University of Oslo, Oslo, Norway
+    start: "2021"
+    end: "2025"
+    status: ongoing
+
+  - name: Christopher Vibe
+    role: Co-supervisor
+    institution: Østfold University of Applied Sciences, Halden, Norway
+    start: "2024"
+    end: "2028"
+    status: ongoing
+
+  - name: Frederik Rogge
+    role: Co-supervisor
+    institution: University of Oslo, Oslo, Norway
+    start: "2021"
+    end: "2026"
+    status: finished
+
+postdoc:
+  - name: Sidney Filho
+    role: Main supervisor
+    institution: Simula Research Laboratory, Oslo, Norway
+    start: "2022"
+    end: "2026"
+    status: finished
+
+masters:
+  - name: "Mia Merlid, Janita Willumsen"
+    year: "2025"
+    count: 2
+    institution: University of Oslo, Oslo, Norway
+
+  - name: "Vilde Ung"
+    year: "2024"
+    count: 1
+    institution: University of Oslo, Oslo, Norway
+
+  - name: "Sara Jensen (now PhD at UiO), Herman Brunborg (now PhD at Stanford), Håkon-Olav Torvik"
+    year: "2023"
+    count: 3
+    institution: University of Oslo, Oslo, Norway
+
+  - name: "Markus Pettersen (now PhD at Simula)"
+    year: "2022"
+    count: 1
+    institution: University of Oslo, Oslo, Norway
+
+  - name: "Mina Frey"
+    year: "2018"
+    count: 1
+    institution: University of Oslo, Oslo, Norway

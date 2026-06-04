@@ -1,0 +1,41 @@
+# Technical skills
+
+programming:
+  expert:
+    - Python (NumPy, SciPy, Pandas, PyTorch)
+  intermediate:
+    - C++
+    - R
+
+ai_ml:
+  expert:
+    - Deep Learning
+    - Machine Learning
+    - Neural Networks
+    - Causal Inference
+    - Representation Learning
+
+development:
+  expert:
+    - Git
+    - CI/CD
+  intermediate:
+    - Docker
+    - AWS
+    - Linux
+
+data_science:
+  expert:
+    - Statistical Analysis
+    - Data Processing
+    - Signal Processing
+
+leadership:
+  - Cross-disciplinary team management
+  - Project management
+  - Technical leadership
+  - Grant writing
+
+languages:
+  - Norwegian (native)
+  - English (fluent)

@@ -1,0 +1,51 @@
+# Employment history — sourced from Full CV.md (2025-06-03)
+# Newest first. Positions only (mobility in mobility.yaml)
+
+- title: Senior Research Scientist
+  subtitle: "Equivalent to associate professor"
+  institution: Simula Research Laboratory
+  location: Oslo, Norway
+  start: "2026"
+  end: present
+  highlights:
+    - Founded and led the BioAI research group of up to 11 researchers (1 postdoc, 10 PhD students)
+    - Managed research portfolio of ~4.5 MNOK/year
+    - Developed novel bio-inspired AI architectures and machine-learning models
+
+- title: Research Scientist
+  subtitle: "Equivalent to assistant professor"
+  institution: Simula Research Laboratory
+  location: Oslo, Norway
+  start: "2022"
+  end: "2026"
+  highlights:
+    - Led the BioAI research group
+    - Co-led 16 MNOK NeuroAI project
+
+- title: Adjunct Associate Professor
+  subtitle: "20% position"
+  institution: University of Oslo
+  department: Department of Physics
+  location: Oslo, Norway
+  start: "2023"
+  end: present
+  highlights:
+    - Led NeuroAI research initiatives and education programs
+
+- title: Researcher
+  subtitle: "20% position"
+  institution: University of Oslo
+  department: Department of Physics
+  location: Oslo, Norway
+  start: "2022"
+  end: "2023"
+  highlights:
+    - Co-led 16 MNOK NeuroAI project as Acting Co-Principal Investigator
+
+- title: Postdoctoral Fellow
+  institution: University of Oslo
+  department: Department of Biosciences
+  location: Oslo, Norway
+  start: "2020"
+  end: "2022"
+  highlights: []

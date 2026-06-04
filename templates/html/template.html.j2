@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ profile.name }} — Curriculum Vitae</title>
+  <meta name="description" content="Academic CV of {{ profile.name }}, {{ profile.title }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ── Header ─────────────────────────────────────────────────────── -->
+  <header class="cv-header">
+    <div class="header-main">
+      <h1 class="name">{{ profile.name }}</h1>
+      <p class="title-line">{{ profile.title }}</p>
+    </div>
+    <div class="header-contact">
+      {% if profile.email %}
+      <div class="contact-item">
+        <span class="icon">✉</span>
+        <a href="mailto:{{ profile.email }}">{{ profile.email }}</a>
+      </div>
+      {% endif %}
+      {% if profile.orcid %}
+      <div class="contact-item">
+        <span class="icon">ID</span>
+        <a href="https://orcid.org/{{ profile.orcid }}" target="_blank">ORCID {{ profile.orcid }}</a>
+      </div>
+      {% endif %}
+      {% if profile.scholar_id %}
+      <div class="contact-item">
+        <span class="icon">GS</span>
+        <a href="https://scholar.google.com/citations?user={{ profile.scholar_id }}" target="_blank">Google Scholar</a>
+      </div>
+      {% endif %}
+      {% if profile.website %}
+      <div class="contact-item">
+        <span class="icon">↗</span>
+        <a href="{{ profile.website }}" target="_blank">{{ profile.website }}</a>
+      </div>
+      {% endif %}
+    </div>
+  </header>
+
+  {% if profile.summary %}
+  <section class="cv-section">
+    <h2 class="section-title">Research Statement</h2>
+    <p class="summary-text">{{ profile.summary }}</p>
+  </section>
+  {% endif %}
+
+  <!-- ── Education ──────────────────────────────────────────────────── -->
+  {% if education %}
+  <section class="cv-section">
+    <h2 class="section-title">Education</h2>
+    <div class="entries">
+      {% for edu in education %}
+      <div class="entry">
+        <div class="entry-meta">
+          <span class="entry-years">{{ edu.start }}–{{ edu.end }}</span>
+        </div>
+        <div class="entry-body">
+          <strong class="entry-title">{{ edu.degree }}</strong>
+          <span class="entry-institution">{{ edu.institution }}{% if edu.location | default('') %}, {{ edu.location }}{% endif %}</span>
+
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- ── Experience ─────────────────────────────────────────────────── -->
+  {% if experience %}
+  <section class="cv-section">
+    <h2 class="section-title">Positions</h2>
+    <div class="entries">
+      {% for exp in experience %}
+      <div class="entry">
+        <div class="entry-meta">
+          <span class="entry-years">{{ exp.start | replace("-01","") | replace("-","–") if "-" in exp.start else exp.start }}–{{ exp.end | replace("-01","") | replace("-","–") if exp.end != "present" else "present" }}</span>
+        </div>
+        <div class="entry-body">
+          <strong class="entry-title">{{ exp.title }}</strong>{% if exp.subtitle | default('') %} <span class="entry-subtitle">({{ exp.subtitle }})</span>{% endif %}
+          <span class="entry-institution">{{ exp.institution }}{% if exp.location | default('') %}, {{ exp.location }}{% endif %}</span>
+          {% if exp.description | default('') %}<p class="entry-desc">{{ exp.description }}</p>{% endif %}
+          {% if exp.highlights | default([]) %}
+          <ul class="highlights">
+            {% for h in exp.highlights %}<li>{{ h }}</li>{% endfor %}
+          </ul>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- ── Awards ────────────────────────────────────────────────────── -->
+  {% if awards %}
+  <section class="cv-section">
+    <h2 class="section-title">Awards &amp; Honours</h2>
+    <div class="entries">
+      {% for award in awards %}
+      <div class="entry">
+        <div class="entry-meta"><span class="entry-years">{{ award.year }}</span></div>
+        <div class="entry-body">
+          <strong class="entry-title">{{ award.title }}</strong>
+          <span class="entry-institution">{{ award.issuer }}</span>
+          {% if award.description | default('') %}<p class="entry-desc">{{ award.description }}</p>{% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- ── Grants ─────────────────────────────────────────────────────── -->
+  {% if grants %}
+  <section class="cv-section">
+    <h2 class="section-title">Grants &amp; Funding</h2>
+    <div class="entries">
+      {% for grant in grants %}
+      {% if grant.status == "funded" or grant.status == "submitted" %}
+      <div class="entry">
+        <div class="entry-meta">
+          <span class="entry-years">{{ grant.start }}{% if grant.end %}–{{ grant.end }}{% endif %}</span>
+          <span class="tag {% if grant.status == 'funded' %}tag-funded{% else %}tag-submitted{% endif %}">{{ grant.status }}</span>
+        </div>
+        <div class="entry-body">
+          <strong class="entry-title">{{ grant.title }}</strong>
+          <span class="entry-institution">{{ grant.funder }} · {{ grant.amount }} · {{ grant.role }}</span>
+          {% if grant.description | default('') %}<p class="entry-desc">{{ grant.description }}</p>{% endif %}
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- ── Publications ───────────────────────────────────────────────── -->
+  {% if publications %}
+  <section class="cv-section">
+    <h2 class="section-title">Publications</h2>
+
+    {% set journal_pubs = publications | selectattr("type", "equalto", "journal") | list %}
+    {% set conf_pubs = publications | selectattr("type", "equalto", "conference") | list %}
+    {% set preprints = publications | selectattr("type", "equalto", "preprint") | list %}
+    {% set chapters = publications | selectattr("type", "equalto", "book_chapter") | list %}
+
+    {% if journal_pubs %}
+    <h3 class="subsection-title">Journal Articles</h3>
+    <ol class="pub-list" reversed>
+      {% for pub in journal_pubs | sort(attribute="year", reverse=True) %}
+      <li class="pub-item {% if pub.selected %}pub-selected{% endif %}">
+        <span class="pub-authors">{{ pub.authors | join(", ") }}</span>
+        <span class="pub-title">"{{ pub.title }}"</span>
+        <span class="pub-venue">{{ pub.venue }}</span>
+        <span class="pub-year">({{ pub.year }})</span>
+        {% if pub.citations | default(0) %}<span class="pub-citations">[{{ pub.citations }} citations]</span>{% endif %}
+        {% if pub.doi | default('') %}<a class="pub-link" href="{{ pub.doi }}" target="_blank">DOI</a>{% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+    {% endif %}
+
+    {% if conf_pubs %}
+    <h3 class="subsection-title">Conference Papers</h3>
+    <ol class="pub-list" reversed>
+      {% for pub in conf_pubs | sort(attribute="year", reverse=True) %}
+      <li class="pub-item {% if pub.selected %}pub-selected{% endif %}">
+        <span class="pub-authors">{{ pub.authors | join(", ") }}</span>
+        <span class="pub-title">"{{ pub.title }}"</span>
+        <span class="pub-venue">{{ pub.venue }}</span>
+        <span class="pub-year">({{ pub.year }})</span>
+        {% if pub.doi | default('') %}<a class="pub-link" href="{{ pub.doi }}" target="_blank">DOI</a>{% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+    {% endif %}
+
+    {% if chapters %}
+    <h3 class="subsection-title">Book Chapters</h3>
+    <ol class="pub-list">
+      {% for pub in chapters %}
+      <li class="pub-item">
+        <span class="pub-authors">{{ pub.authors | join(", ") }}</span>
+        <span class="pub-title">"{{ pub.title }}"</span>
+        <em class="pub-venue">{{ pub.venue }}</em>
+        <span class="pub-year">({{ pub.year }})</span>
+      </li>
+      {% endfor %}
+    </ol>
+    {% endif %}
+
+    {% if preprints %}
+    <h3 class="subsection-title">Preprints</h3>
+    <ol class="pub-list">
+      {% for pub in preprints | sort(attribute="year", reverse=True) %}
+      <li class="pub-item">
+        <span class="pub-authors">{{ pub.authors | join(", ") }}</span>
+        <span class="pub-title">"{{ pub.title }}"</span>
+        <span class="pub-venue">{{ pub.venue }}</span>
+        <span class="pub-year">({{ pub.year }})</span>
+        {% if pub.note | default('') %}<span class="pub-note">{{ pub.note }}</span>{% endif %}
+        {% if pub.url | default('') %}<a class="pub-link" href="{{ pub.url }}" target="_blank">Link</a>{% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+    {% endif %}
+
+  </section>
+  {% endif %}
+
+  <!-- ── Teaching ───────────────────────────────────────────────────── -->
+  {% if teaching %}
+  <section class="cv-section">
+    <h2 class="section-title">Teaching</h2>
+    <div class="entries">
+      {% for course in teaching %}
+      <div class="entry">
+        <div class="entry-meta"><span class="entry-years">{{ course.year }}</span></div>
+        <div class="entry-body">
+          <strong class="entry-title">{{ course.course }}</strong>
+          <span class="entry-institution">{{ course.role }} · {{ course.institution }}</span>
+          {% if course.description | default('') %}<p class="entry-desc">{{ course.description }}</p>{% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- ── Talks ──────────────────────────────────────────────────────── -->
+  {% if talks %}
+  <section class="cv-section">
+    <h2 class="section-title">Invited Talks</h2>
+    <div class="entries">
+      {% for talk in talks %}
+      <div class="entry">
+        <div class="entry-meta"><span class="entry-years">{{ talk.date[:4] }}</span></div>
+        <div class="entry-body">
+          <strong class="entry-title">{{ talk.title }}</strong>
+          <span class="entry-institution">{{ talk.event }}{% if talk.location %}, {{ talk.location }}{% endif %}</span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- ── Skills ─────────────────────────────────────────────────────── -->
+  {% if skills %}
+  <section class="cv-section">
+    <h2 class="section-title">Technical Skills</h2>
+    <dl class="skills-grid">
+      {% if skills.programming %}
+      <dt>Programming</dt>
+      <dd>
+        {% if skills.programming.expert %}<em>Expert:</em> {{ skills.programming.expert | join(", ") }}{% endif %}
+        {% if skills.programming.intermediate %} · <em>Intermediate:</em> {{ skills.programming.intermediate | join(", ") }}{% endif %}
+      </dd>
+      {% endif %}
+      {% if skills.ai_ml %}
+      <dt>AI / ML</dt>
+      <dd>{{ skills.ai_ml.expert | join(", ") }}</dd>
+      {% endif %}
+      {% if skills.development %}
+      <dt>Development</dt>
+      <dd>
+        {% if skills.development.expert %}<em>Expert:</em> {{ skills.development.expert | join(", ") }}{% endif %}
+        {% if skills.development.intermediate %} · <em>Intermediate:</em> {{ skills.development.intermediate | join(", ") }}{% endif %}
+      </dd>
+      {% endif %}
+      {% if skills.data_science %}
+      <dt>Data Science</dt>
+      <dd>{{ skills.data_science.expert | join(", ") }}</dd>
+      {% endif %}
+    </dl>
+  </section>
+  {% endif %}
+
+  <!-- ── References ─────────────────────────────────────────────────── -->
+  {% if references %}
+  <section class="cv-section">
+    <h2 class="section-title">References</h2>
+    <div class="references-grid">
+      {% for ref in references %}
+      <div class="reference-card">
+        <strong>{{ ref.name }}</strong>
+        <span>{{ ref.title }}, {{ ref.institution }}</span>
+        <a href="mailto:{{ ref.email }}">{{ ref.email }}</a>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <footer class="cv-footer">
+    <p>Generated {{ build_date }} · <a href="{{ profile.website_institution }}" target="_blank">{{ profile.website_institution }}</a></p>
+  </footer>
+
+</div><!-- /page -->
+</body>
+</html>

@@ -1,0 +1,75 @@
+% style.sty — Industry CV — compact one-page design
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{style}[2025/01/01 Industry CV Style]
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[a4paper, top=10mm, bottom=8mm, left=14mm, right=14mm]{geometry}
+\usepackage{microtype}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage[hidelinks,colorlinks=true,urlcolor=accentc,linkcolor=black]{hyperref}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{ragged2e}
+
+% Look for images in the repo root (two levels up from output/industry/)
+\graphicspath{{../../}}
+
+% Modern sans font (light weight for body, bold for headings)
+\usepackage[sfdefault,light]{roboto}
+
+% ── Colours ──────────────────────────────────────────────────────────────────
+\definecolor{accent}{RGB}{30,64,175}
+\definecolor{accentc}{RGB}{37,99,235}
+\definecolor{headergray}{RGB}{75,85,99}
+\definecolor{bodytext}{RGB}{30,30,30}
+\definecolor{rulecol}{RGB}{209,213,219}
+\colorlet{RULECOL}{rulecol}
+
+% ── Section headings — tight ─────────────────────────────────────────────────
+\titleformat{\section}
+  {\small\bfseries\color{accent}\uppercase}
+  {}
+  {0pt}
+  {}
+  [\vspace{-3pt}{\color{rulecol}\rule{\linewidth}{0.6pt}}\vspace{1pt}]
+\titlespacing{\section}{0pt}{5pt}{1pt}
+
+% ── Circular photo macro ──────────────────────────────────────────────────────
+% Usage: \cvphoto{diameter}{filename}
+\newcommand{\cvphoto}[2]{%
+  \begin{tikzpicture}
+    \clip (0,0) circle (#1/2);
+    \node[inner sep=0pt] at (0,0)
+      {\includegraphics[width=#1,height=#1,keepaspectratio=false]{#2}};
+  \end{tikzpicture}%
+}
+
+% ── CV table (education, dates) ───────────────────────────────────────────────
+\newenvironment{cvtable}{%
+  \begin{tabular}{@{}>{\raggedright\color{headergray}\small}p{1.6cm}
+                      p{\dimexpr\linewidth-2.0cm\relax}@{}}
+}{%
+  \end{tabular}
+}
+
+% ── Skills table ─────────────────────────────────────────────────────────────
+\newenvironment{skillstable}{%
+  \begin{tabular}{@{}>{\bfseries\small}p{2.6cm}
+                      p{\dimexpr\linewidth-3.0cm\relax}@{}}
+}{%
+  \end{tabular}
+}
+
+% ── Spacing ──────────────────────────────────────────────────────────────────
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1pt}
+\setlist[itemize]{nosep, topsep=1pt, itemsep=0pt, leftmargin=1.1em}
+\setlist[enumerate]{nosep, topsep=1pt, itemsep=0pt}
+\color{bodytext}
+\pagestyle{empty}

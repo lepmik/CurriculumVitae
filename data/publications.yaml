@@ -1,0 +1,584 @@
+- title: Sensor Movement Drives Emergent Attention and Scalability in Active Neural
+    Cellular Automata
+  authors:
+  - Mia-Katrin Kvalsund
+  - Kai Olav Ellefsen
+  - Kyrre Glette
+  - Sidney Pontes Filho
+  - Mikkel Elle Lepperød
+  venue: Neural Networks
+  year: 2026
+  type: journal
+  selected: true
+  rcn_group: nca
+  rcn_num: 1
+  citations: 3
+  citekey: sensor_nca
+- title: A Bio-Inspired Minimal Model for Non-Stationary K-Armed Bandits
+  authors:
+  - Krubeal Danielli
+  - Mikkel Elle Lepperød
+  venue: Biological Cybernetics
+  year: 2026
+  type: journal
+  selected: false
+- title: 'ARC-NCA: Towards Developmental Solutions to the Abstraction and Reasoning
+    Corpus'
+  authors:
+  - Etienne Guichard
+  - Felix Reimers
+  - Mia Kvalsund
+  - Mikkel Elle Lepperød
+  - Stefano Nichele
+  venue: Artificial Life (ALife)
+  year: 2025
+  type: conference
+  selected: true
+  rcn_group: nca
+  rcn_num: 2
+  rcn_note: Accepted ALife; featured on the MLST podcast
+  citations: 8
+  citekey: arc_nca
+- title: 'EngramNCA: a neural cellular automaton model of memory transfer'
+  authors:
+  - Etienne Guichard
+  - Felix Reimers
+  - Mia Kvalsund
+  - Mikkel Elle Lepperød
+  - Stefano Nichele
+  venue: Artificial Life (ALife)
+  year: 2025
+  type: conference
+  selected: true
+  rcn_group: nca
+  rcn_num: 3
+  rcn_note: Accepted ALife
+  citations: 4
+  citekey: engram_nca
+- title: Critical neural cellular automata
+  authors:
+  - Sidney Pontes-Filho
+  - Stefano Nichele
+  - Mikkel Elle Lepperød
+  venue: Artificial Life (ALife)
+  year: 2025
+  type: conference
+  selected: false
+- title: 'Hexagons all the way down: Grid cells as a conformal isometric map of space'
+  authors:
+  - Vemund Schøyen
+  - Constantin Bechkov
+  - Markus Borud Pettersen
+  - Erik Hermansen
+  - Konstantin Holzhausen
+  - Anders Malthe-Sørenssen
+  - Marianne Fyhn
+  - Mikkel Elle Lepperød
+  venue: PLOS Computational Biology
+  year: 2025
+  type: journal
+  selected: true
+  citations: 10
+  rcn_group: spatial_nav
+  rcn_num: 7
+  citekey: schoyen2025
+- title: 'Exploring mechanisms of Neural Robustness: probing the bridge between geometry
+    and spectrum'
+  authors:
+  - Konstantin Holzhausen
+  - Mia Merlid
+  - Håkon Olav Torvik
+  - Anders Malthe-Sørenssen
+  - Mikkel Elle Lepperød
+  venue: Neural Computing and Applications
+  year: 2025
+  type: journal
+  selected: false
+- title: Self-Supervised Grid Cells Without Path Integration
+  authors:
+  - Markus Pettersen
+  - Vemund Sigmundson Schøyen
+  - Mattis Dalsætra Østby
+  - Anders Malthe-Sørenssen
+  - Mikkel Elle Lepperød
+  venue: bioRxiv
+  year: 2025
+  type: preprint
+  citations: 8
+- title: Towards an Analytic Approach to Understanding the Structure of Power Law
+    Representations in Neural Networks
+  authors:
+  - Konstantin Holzhausen
+  - Mikkel Elle Lepperød
+  - Anders Malthe-Sørenssen
+  venue: arXiv
+  year: 2025
+  type: preprint
+- title: Flexible navigation with neuromodulated cognitive maps
+  authors:
+  - Krubeal Danielli
+  - Mikkel Elle Lepperød
+  venue: bioRxiv
+  year: 2025
+  type: preprint
+  note: In review at PLOS Computational Biology
+- title: Reservoir Computing with Evolved Critical Neural Cellular Automata
+  authors:
+  - Sidney Pontes-Filho
+  - Stefano Nichele
+  - Mikkel Lepperød
+  venue: ''
+  year: 2025
+  url: https://direct.mit.edu/isal/proceedings-abstract/isal2025/37/134075
+  type: journal
+  selected: false
+  citations: 4
+- title: Exponential Map Models as an Interpretable Framework for Generating Neural
+    Spatial Representations
+  authors:
+  - Markus Pettersen
+  - Nicolai Haug
+  - Joakim Bergli
+  - Thomas M Surowiec
+  - Mikkel Elle Lepperød
+  venue: bioRxiv
+  year: 2025
+  url: https://www.biorxiv.org/content/10.1101/2025.09.25.678504.abstract
+  type: preprint
+  selected: false
+  citations: 0
+- title: Proceedings of NORA’s annual conference 2025
+  authors:
+  - Geir Halnes
+  - Anam Javaid
+  - Michael Solvang
+  - Stefano Nichele
+  - Michael Riegler
+  - Bjørn-Jostein Singstad
+  - Baltasar Beferull-Lozano
+  - Emilio Ruiz-Moreno
+  - Luis M Lopez-Ramos
+  - Mehrzad Abdi Khalife
+  - Ola Huse Ramstad
+  - Hamze Issa
+  - Arina Surko
+  - Axel Sandvig
+  - Hasan Oğul
+  - Daniele Fantin
+  - Ioanna Sandvig
+  - Christopher Michael Skeide Vibe
+  - Kushtrim Visoka
+  - Mehdi HoushmandSarkhoosh
+  - Aaron de Leyos
+  - Sinan Uğur Umu
+  - Klaus Johannsen
+  - Kjetil Indrehus
+  - Malcom McMillan
+  - Julia Kropiunig
+  - Ryan Marinelli
+  - Fadi Al Machot
+  - Xue-Cheng Tai
+  - Andrea Alessandro Gasparini
+  - David Parkes
+  - Semra Oztemel Sari
+  - Gro Fonnes
+  - Cise Midoglu
+  - Anton Tkachenko
+  - Maria Bashir
+  - Kari-Anne Lyng
+  - Florenc Demrozi
+  - Kate Briggs
+  - Junyong You
+  - Signe Riemer-Sørensen
+  - Benjamin Adolphi
+  - Martin T Horsch
+  - Arangan Subramaniam
+  - Ibrahim Riza Hallac
+  - Lina Plataniti
+  - Hao Liu
+  - Mikkel Lepperød
+  - Changkyu Choi
+  - Preben Castberg
+  - Abdelaziz Qassi
+  - Raymond H Chan
+  - Anja Stein
+  - Heinz A Preisig
+  - Alexander Johannes Stasik
+  - Saeed Shafiee Sabet
+  - Nils Olav Handegard
+  - Robert Jenssen
+  - Solve Sæbø
+  - Synnøve Rubach
+  - Waldir Leoncio Netto
+  - Pankaj Pandey
+  - Jan Wuite
+  - Arezo Shakeri
+  - Shailendra Singh
+  - Ali Ramezani-Kebrya
+  - Pål Halvorsen
+  - David S Leslie
+  - Matteo Iervasi
+  - Mathis Korseberg Stokke
+  - Tomas Kupka
+  - Lingfeng Li
+  - Helge Fredriksen
+  - Shakiba Sadat Mirbagheri
+  - Ali Ramezanikebrya
+  - Jacob Alexander Hay
+  - Aslak Djupskås
+  - Mina FNorwayarmanbar
+  - Claudio Sartori
+  - Felix Simon Reimers
+  - Thomas Nagler
+  - Amber Leeson
+  venue: Nordic Machine Intelligence
+  year: 2025
+  url: https://scholar.google.com/scholar?cluster=6095411897428335232&hl=en&oi=scholarr
+  type: abstract
+  selected: false
+  citations: 0
+- title: 'The Generalist Brain Module: Module Repetition in Neural Networks in Light
+    of the Minicolumn Hypothesis'
+  authors:
+  - Mia-Katrin Kvalsund
+  - Mikkel Elle Lepperød
+  venue: ''
+  year: 2025
+  url: https://arxiv.org/abs/2507.12473
+  type: abstract
+  selected: false
+  citations: 0
+- title: Exploring biologically inspired mechanisms of adversarial robustness
+  authors:
+  - Konstantin Holzhausen
+  - Mia Merlid
+  - Håkon Olav Torvik
+  - Anders Malthe-Sørenssen
+  - Mikkel Elle Lepperød
+  venue: Neural Computing and Applications
+  year: 2025
+  url: https://link.springer.com/article/10.1007/s00521-025-11019-6
+  type: journal
+  selected: false
+  citations: 0
+- title: Learning Place Cell Representations and Context-Dependent Remapping
+  authors:
+  - Markus Pettersen
+  - Frederik Rogge
+  - Mikkel Elle Lepperød
+  venue: Advances in Neural Information Processing Systems (NeurIPS)
+  year: 2024
+  type: conference
+  selected: true
+  citations: 6
+  rcn_group: spatial_nav
+  rcn_num: 4
+  citekey: pettersen2024_neurips
+- title: Learning place cells and remapping by decoding the cognitive map
+  authors:
+  - Markus Borud Pettersen
+  - Vemund Sigmundson Schøyen
+  - Anders Malthe-Sørenssen
+  - Mikkel Elle Lepperød
+  venue: eLife
+  year: 2024
+  type: journal
+  selected: true
+  citations: 6
+  rcn_group: spatial_nav
+  rcn_num: 5
+  citekey: pettersen2024_elife
+- title: Task and Behavior-Related Variables Are Encoded by the Postrhinal and Medial
+    Entorhinal Cortex During Non-Spatial Associative Learning
+  authors:
+  - Ingeborg Nymoen Nystuen
+  - Frederik Sebastian Rogge
+  - Anna Pauline Hjertvik Aasen
+  - Sverre Grodem
+  - Anders Malthe-Sørenssen
+  - Mikkel Elle Lepperød
+  - Torkel Hafting
+  - Marianne Fyhn
+  - Kristian Kinden Lensjø
+  venue: bioRxiv
+  year: 2024
+  type: preprint
+  note: Submitted to eLife
+- title: Coherently Remapping Toroidal Cells But Not Grid Cells are Responsible for
+    Path Integration in Virtual Agents
+  authors:
+  - Vemund Sigmundson Schøyen
+  - Markus Borud Pettersen
+  - Konstantin Holzhausen
+  - Anders Malthe-Sørenssen
+  - Mikkel Elle Lepperød
+  venue: iScience
+  year: 2023
+  type: journal
+  selected: true
+  citations: 24
+  rcn_group: spatial_nav
+  rcn_num: 6
+  citekey: schoyen2023
+- title: 'Spikeometric: Linear Non-Linear Cascade Spiking Neural Networks with Pytorch
+    Geometric'
+  authors:
+  - Jakob L. Sønstebø
+  - Herman Brunborg
+  - Mikkel Elle Lepperød
+  venue: Journal of Open Source Software
+  year: 2023
+  type: journal
+  selected: false
+  citations: 1
+- title: Self-Supervised Pseudodata Filtering for Improved Replay with Sub-Optimal
+    Generators
+  authors:
+  - Mateusz Wasiluk
+  - Mikkel Elle Lepperød
+  - Kai Olav Ellefsen
+  venue: arXiv
+  year: 2023
+  type: preprint
+- title: Inferring causal connectivity from pairwise recordings and optogenetics
+  authors:
+  - Mikkel Elle Lepperød
+  - Tristan Stöber
+  - Torkel Hafting
+  - Marianne Fyhn
+  - Konrad Paul Kording
+  venue: PLOS Computational Biology
+  year: 2022
+  type: journal
+  selected: true
+  citations: 25
+  rcn_group: causal
+  rcn_num: 8
+  citekey: lepperoD2022_causal
+- title: 'MIIND: A Population-Level Neural Simulator Incorporating Stochastic Point
+    Neuron Models'
+  authors:
+  - Marc de Kamps
+  - Hugh Osborne
+  - Lukas Deutz
+  - Frank van der Velde
+  - Mikkel Lepperød
+  - Yi Ming Lai
+  - David Sichau
+  venue: Encyclopedia of Computational Neuroscience
+  year: 2022
+  type: book_chapter
+  selected: false
+- title: Isometric Representations in Neural Networks Improve Robustness
+  authors:
+  - Kosio Beshkov
+  - Jonas Verhellen
+  - Mikkel Elle Lepperød
+  venue: arXiv
+  year: 2022
+  type: preprint
+  note: Accepted in Scientific Reports
+  citations: 1
+- title: NeuroAI-A strategic opportunity for Norway and Europe
+  authors:
+  - Stefano Nichele
+  - Solve Sæbø
+  - Klas Pettersen
+  - Mikkel Lepperød
+  venue: Nordic Machine Intelligence
+  year: 2022
+  url: https://www.nora.ai/nora-projects/nora-sig/NeuroAI/resources-no/neuroai___a_strategic_opportunity_for_norway_and_europe+(4).pdf
+  type: journal
+  selected: false
+  citations: 3
+- title: Optogenetic pacing of medial septum parvalbumin-positive cells disrupts temporal
+    but not spatial firing in grid cells
+  authors:
+  - Mikkel Elle Lepperød
+  - Ane Charlotte Christensen
+  - Kristian Kinden Lensjø
+  - Alessio Paolo Buccino
+  - Jai Yu
+  - Marianne Fyhn
+  - Torkel Hafting
+  venue: Science Advances
+  year: 2021
+  type: journal
+  selected: true
+  citations: 23
+  rcn_group: neuroscience
+  rcn_num: 9
+  citekey: lepperoD2021_optogenetic
+- title: Perineuronal nets stabilize the grid cell network
+  authors:
+  - Ane Charlotte Christensen
+  - Kristian Kinden Lensjø
+  - Mikkel Elle Lepperød
+  - Svenn-Arne Dragly
+  - Halvard Sutterud
+  - Jan Sigurd Blackstad
+  - Marianne Fyhn
+  - Torkel Hafting
+  venue: Nature Communications
+  year: 2021
+  type: journal
+  selected: true
+  citations: 94
+  rcn_group: neuroscience
+  rcn_num: 10
+  note: equal contributions (*)
+  citekey: christensen2021
+- title: 'MIIND: a model-agnostic simulator of neural populations'
+  authors:
+  - Hugh Osborne
+  - Yi Ming Lai
+  - Mikkel Elle Lepperød
+  - David Sichau
+  - Lukas Deutz
+  - Marc de Kamps
+  venue: Frontiers in Neuroinformatics
+  year: 2021
+  type: journal
+  selected: false
+  citations: 6
+- title: 'Experimental pipeline (expipe): A lightweight data management platform to
+    simplify the steps from experiment to data analysis'
+  authors:
+  - Mikkel Elle Lepperød
+  - Svenn-Arne Dragly
+  - Alessio Paolo Buccino
+  - Milad Hobbi Mobarhan
+  - Anders Malthe-Sørenssen
+  - Torkel Hafting
+  - Marianne Fyhn
+  venue: Frontiers in Neuroinformatics
+  year: 2020
+  type: journal
+  selected: false
+  citations: 8
+- title: 'Computational geometry for modeling neural populations: From visualization
+    to simulation'
+  authors:
+  - Marc de Kamps
+  - Mikkel Lepperød
+  - Yi Ming Lai
+  venue: PLoS Computational Biology
+  year: 2019
+  type: journal
+  selected: false
+  citations: 18
+- title: 'Experimental directory structure (Exdir): an alternative to HDF5 without
+    introducing a new file format'
+  authors:
+  - Svenn-Arne Dragly
+  - Milad Hobbi Mobarhan
+  - Mikkel E. Lepperød
+  - Simen Tennøe
+  - Marianne Fyhn
+  - Torkel Hafting
+  - Anders Malthe-Sørenssen
+  venue: Frontiers in Neuroinformatics
+  year: 2018
+  type: journal
+  selected: false
+  citations: 25
+- title: Open source modules for tracking animal behavior and closed-loop stimulation
+    based on Open Ephys and Bonsai
+  authors:
+  - Alessio Paolo Buccino
+  - Mikkel Elle Lepperød
+  - Svenn-Arne Dragly
+  - Philipp Häfliger
+  - Marianne Fyhn
+  - Torkel Hafting
+  venue: Journal of neural engineering
+  year: 2018
+  url: https://iopscience.iop.org/article/10.1088/1741-2552/aacf45/meta
+  type: journal
+  selected: false
+  citations: 45
+- title: Removal of perineuronal nets unlocks juvenile plasticity through network
+    mechanisms of decreased inhibition and increased gamma activity
+  authors:
+  - Kristian Kinden Lensjø
+  - Mikkel Elle Lepperød
+  - Gunnar Dick
+  - Torkel Hafting
+  - Marianne Fyhn
+  venue: Journal of Neuroscience
+  year: 2017
+  type: journal
+  selected: false
+  citations: 353
+- title: Temporal processing in the visual cortex of the awake and anesthetized rat
+  authors:
+  - Ida EJ Aasebø
+  - Mikkel E. Lepperød
+  - Maria Stavrinou
+  - Sandra Nøkkevangen
+  - Gaute Einevoll
+  - Torkel Hafting
+  - Marianne Fyhn
+  venue: eNeuro
+  year: 2017
+  type: journal
+  selected: false
+  citations: 32
+- title: On the role of input-specific perturbations of medial septal projections
+    to the grid cell network
+  authors:
+  - M Elle Lepperod
+  - M Wigestrand
+  - M Frey
+  - K Kinden Lensjo
+  - G Einevoll
+  - T Solstad
+  - M Fyhn
+  - T Hafting
+  venue: ''
+  year: 2017
+  url: https://scholar.google.com/scholar?cluster=6186713089047091021&hl=en&oi=scholarr
+  type: abstract
+  selected: false
+  citations: 0
+- title: Doppler effects of an oscillating line source in shear flow with a free surface
+  authors:
+  - Peder A. Tyvand
+  - Mikkel Elle Lepperød
+  venue: Wave Motion
+  year: 2015
+  type: journal
+  selected: false
+  citations: 8
+- title: Oscillatory line source for water waves in shear flow
+  authors:
+  - Peder A. Tyvand
+  - Mikkel Elle Lepperød
+  venue: Wave Motion
+  year: 2014
+  type: journal
+  selected: false
+  citations: 12
+- title: Numerical stability of a scalar neural-field model with a sigmoidal firing-rate
+    function
+  authors:
+  - Bjørn Mikkel Elle Lepperød
+  venue: ''
+  year: 2014
+  url: ''
+  type: abstract
+  selected: false
+  citations: 0
+- title: 'The distributed neocortex: How neuroscience can inspire distributed AI systems'
+  authors:
+  - Mia-Katrin Kvalsund
+  - Kai Olav Ellefsen
+  - Kyrre Glette
+  - Sidney Pontes-Filho
+  - Mikkel Elle Lepperød
+  venue: ''
+  year: null
+  url: https://web-backend.simula.no/sites/default/files/2023-10/3-Kvalsund.pdf
+  type: abstract
+  selected: false
+  citations: 0
