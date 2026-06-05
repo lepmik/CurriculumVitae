@@ -9,11 +9,16 @@
   venue: Neural Networks
   year: 2026
   type: journal
-  selected: true
-  rcn_group: nca
-  rcn_num: 1
+  selected:
+  - rcn
   citations: 3
   citekey: sensor_nca
+  featured:
+  - earlycareer
+  group:
+    rcn: nca
+  num:
+    rcn: 1
 - title: A Bio-Inspired Minimal Model for Non-Stationary K-Armed Bandits
   authors:
   - Krubeal Danielli
@@ -21,7 +26,8 @@
   venue: Biological Cybernetics
   year: 2026
   type: journal
-  selected: false
+  selected: []
+  featured: []
 - title: 'ARC-NCA: Towards Developmental Solutions to the Abstraction and Reasoning
     Corpus'
   authors:
@@ -33,12 +39,17 @@
   venue: Artificial Life (ALife)
   year: 2025
   type: conference
-  selected: true
-  rcn_group: nca
-  rcn_num: 2
-  rcn_note: Accepted ALife; featured on the MLST podcast
+  selected:
+  - rcn
+  rcn_note: Featured on the MLST podcast
   citations: 8
   citekey: arc_nca
+  featured:
+  - earlycareer
+  group:
+    rcn: nca
+  num:
+    rcn: 2
 - title: 'EngramNCA: a neural cellular automaton model of memory transfer'
   authors:
   - Etienne Guichard
@@ -49,12 +60,16 @@
   venue: Artificial Life (ALife)
   year: 2025
   type: conference
-  selected: true
-  rcn_group: nca
-  rcn_num: 3
+  selected:
+  - rcn
   rcn_note: Accepted ALife
   citations: 4
   citekey: engram_nca
+  featured: []
+  group:
+    rcn: nca
+  num:
+    rcn: 3
 - title: Critical neural cellular automata
   authors:
   - Sidney Pontes-Filho
@@ -63,7 +78,8 @@
   venue: Artificial Life (ALife)
   year: 2025
   type: conference
-  selected: false
+  selected: []
+  featured: []
 - title: 'Hexagons all the way down: Grid cells as a conformal isometric map of space'
   authors:
   - Vemund Schøyen
@@ -77,11 +93,15 @@
   venue: PLOS Computational Biology
   year: 2025
   type: journal
-  selected: true
+  selected:
+  - rcn
   citations: 10
-  rcn_group: spatial_nav
-  rcn_num: 7
   citekey: schoyen2025
+  featured: []
+  group:
+    rcn: spatial_nav
+  num:
+    rcn: 7
 - title: 'Exploring mechanisms of Neural Robustness: probing the bridge between geometry
     and spectrum'
   authors:
@@ -93,7 +113,8 @@
   venue: Neural Computing and Applications
   year: 2025
   type: journal
-  selected: false
+  selected: []
+  featured: []
 - title: Self-Supervised Grid Cells Without Path Integration
   authors:
   - Markus Pettersen
@@ -105,6 +126,8 @@
   year: 2025
   type: preprint
   citations: 8
+  featured: []
+  selected: []
 - title: Towards an Analytic Approach to Understanding the Structure of Power Law
     Representations in Neural Networks
   authors:
@@ -114,6 +137,8 @@
   venue: arXiv
   year: 2025
   type: preprint
+  featured: []
+  selected: []
 - title: Flexible navigation with neuromodulated cognitive maps
   authors:
   - Krubeal Danielli
@@ -122,6 +147,8 @@
   year: 2025
   type: preprint
   note: In review at PLOS Computational Biology
+  featured: []
+  selected: []
 - title: Reservoir Computing with Evolved Critical Neural Cellular Automata
   authors:
   - Sidney Pontes-Filho
@@ -131,8 +158,9 @@
   year: 2025
   url: https://direct.mit.edu/isal/proceedings-abstract/isal2025/37/134075
   type: journal
-  selected: false
+  selected: []
   citations: 4
+  featured: []
 - title: Exponential Map Models as an Interpretable Framework for Generating Neural
     Spatial Representations
   authors:
@@ -145,8 +173,9 @@
   year: 2025
   url: https://www.biorxiv.org/content/10.1101/2025.09.25.678504.abstract
   type: preprint
-  selected: false
+  selected: []
   citations: 0
+  featured: []
 - title: Proceedings of NORA’s annual conference 2025
   authors:
   - Geir Halnes
@@ -235,8 +264,9 @@
   year: 2025
   url: https://scholar.google.com/scholar?cluster=6095411897428335232&hl=en&oi=scholarr
   type: abstract
-  selected: false
+  selected: []
   citations: 0
+  featured: []
 - title: 'The Generalist Brain Module: Module Repetition in Neural Networks in Light
     of the Minicolumn Hypothesis'
   authors:
@@ -246,8 +276,9 @@
   year: 2025
   url: https://arxiv.org/abs/2507.12473
   type: abstract
-  selected: false
+  selected: []
   citations: 0
+  featured: []
 - title: Exploring biologically inspired mechanisms of adversarial robustness
   authors:
   - Konstantin Holzhausen
@@ -259,8 +290,9 @@
   year: 2025
   url: https://link.springer.com/article/10.1007/s00521-025-11019-6
   type: journal
-  selected: false
+  selected: []
   citations: 0
+  featured: []
 - title: Learning Place Cell Representations and Context-Dependent Remapping
   authors:
   - Markus Pettersen
@@ -269,11 +301,15 @@
   venue: Advances in Neural Information Processing Systems (NeurIPS)
   year: 2024
   type: conference
-  selected: true
+  selected:
+  - rcn
   citations: 6
-  rcn_group: spatial_nav
-  rcn_num: 4
   citekey: pettersen2024_neurips
+  featured: []
+  group:
+    rcn: spatial_nav
+  num:
+    rcn: 4
 - title: Learning place cells and remapping by decoding the cognitive map
   authors:
   - Markus Borud Pettersen
@@ -283,11 +319,15 @@
   venue: eLife
   year: 2024
   type: journal
-  selected: true
+  selected:
+  - rcn
   citations: 6
-  rcn_group: spatial_nav
-  rcn_num: 5
   citekey: pettersen2024_elife
+  featured: []
+  group:
+    rcn: spatial_nav
+  num:
+    rcn: 5
 - title: Task and Behavior-Related Variables Are Encoded by the Postrhinal and Medial
     Entorhinal Cortex During Non-Spatial Associative Learning
   authors:
@@ -304,6 +344,8 @@
   year: 2024
   type: preprint
   note: Submitted to eLife
+  featured: []
+  selected: []
 - title: Coherently Remapping Toroidal Cells But Not Grid Cells are Responsible for
     Path Integration in Virtual Agents
   authors:
@@ -315,11 +357,16 @@
   venue: iScience
   year: 2023
   type: journal
-  selected: true
+  selected:
+  - rcn
   citations: 24
-  rcn_group: spatial_nav
-  rcn_num: 6
   citekey: schoyen2023
+  featured:
+  - earlycareer
+  group:
+    rcn: spatial_nav
+  num:
+    rcn: 6
 - title: 'Spikeometric: Linear Non-Linear Cascade Spiking Neural Networks with Pytorch
     Geometric'
   authors:
@@ -329,8 +376,9 @@
   venue: Journal of Open Source Software
   year: 2023
   type: journal
-  selected: false
+  selected: []
   citations: 1
+  featured: []
 - title: Self-Supervised Pseudodata Filtering for Improved Replay with Sub-Optimal
     Generators
   authors:
@@ -340,6 +388,8 @@
   venue: arXiv
   year: 2023
   type: preprint
+  featured: []
+  selected: []
 - title: Inferring causal connectivity from pairwise recordings and optogenetics
   authors:
   - Mikkel Elle Lepperød
@@ -350,11 +400,16 @@
   venue: PLOS Computational Biology
   year: 2022
   type: journal
-  selected: true
+  selected:
+  - rcn
   citations: 25
-  rcn_group: causal
-  rcn_num: 8
   citekey: lepperoD2022_causal
+  featured:
+  - earlycareer
+  group:
+    rcn: causal
+  num:
+    rcn: 8
 - title: 'MIIND: A Population-Level Neural Simulator Incorporating Stochastic Point
     Neuron Models'
   authors:
@@ -368,17 +423,19 @@
   venue: Encyclopedia of Computational Neuroscience
   year: 2022
   type: book_chapter
-  selected: false
+  selected: []
+  featured: []
 - title: Isometric Representations in Neural Networks Improve Robustness
   authors:
   - Kosio Beshkov
   - Jonas Verhellen
   - Mikkel Elle Lepperød
-  venue: arXiv
+  venue: Scientific Reports
   year: 2022
-  type: preprint
-  note: Accepted in Scientific Reports
+  type: journal
   citations: 1
+  featured: []
+  selected: []
 - title: NeuroAI-A strategic opportunity for Norway and Europe
   authors:
   - Stefano Nichele
@@ -389,8 +446,9 @@
   year: 2022
   url: https://www.nora.ai/nora-projects/nora-sig/NeuroAI/resources-no/neuroai___a_strategic_opportunity_for_norway_and_europe+(4).pdf
   type: journal
-  selected: false
+  selected: []
   citations: 3
+  featured: []
 - title: Optogenetic pacing of medial septum parvalbumin-positive cells disrupts temporal
     but not spatial firing in grid cells
   authors:
@@ -404,15 +462,19 @@
   venue: Science Advances
   year: 2021
   type: journal
-  selected: true
+  selected:
+  - rcn
   citations: 23
-  rcn_group: neuroscience
-  rcn_num: 9
   citekey: lepperoD2021_optogenetic
+  featured: []
+  group:
+    rcn: neuroscience
+  num:
+    rcn: 9
 - title: Perineuronal nets stabilize the grid cell network
   authors:
-  - Ane Charlotte Christensen
-  - Kristian Kinden Lensjø
+  - Ane Charlotte Christensen*
+  - Kristian Kinden Lensjø*
   - Mikkel Elle Lepperød
   - Svenn-Arne Dragly
   - Halvard Sutterud
@@ -422,12 +484,17 @@
   venue: Nature Communications
   year: 2021
   type: journal
-  selected: true
+  selected:
+  - rcn
   citations: 94
-  rcn_group: neuroscience
-  rcn_num: 10
   note: equal contributions (*)
   citekey: christensen2021
+  featured:
+  - earlycareer
+  group:
+    rcn: neuroscience
+  num:
+    rcn: 10
 - title: 'MIIND: a model-agnostic simulator of neural populations'
   authors:
   - Hugh Osborne
@@ -439,8 +506,9 @@
   venue: Frontiers in Neuroinformatics
   year: 2021
   type: journal
-  selected: false
+  selected: []
   citations: 6
+  featured: []
 - title: 'Experimental pipeline (expipe): A lightweight data management platform to
     simplify the steps from experiment to data analysis'
   authors:
@@ -454,8 +522,9 @@
   venue: Frontiers in Neuroinformatics
   year: 2020
   type: journal
-  selected: false
+  selected: []
   citations: 8
+  featured: []
 - title: 'Computational geometry for modeling neural populations: From visualization
     to simulation'
   authors:
@@ -465,8 +534,9 @@
   venue: PLoS Computational Biology
   year: 2019
   type: journal
-  selected: false
+  selected: []
   citations: 18
+  featured: []
 - title: 'Experimental directory structure (Exdir): an alternative to HDF5 without
     introducing a new file format'
   authors:
@@ -480,8 +550,9 @@
   venue: Frontiers in Neuroinformatics
   year: 2018
   type: journal
-  selected: false
+  selected: []
   citations: 25
+  featured: []
 - title: Open source modules for tracking animal behavior and closed-loop stimulation
     based on Open Ephys and Bonsai
   authors:
@@ -495,8 +566,9 @@
   year: 2018
   url: https://iopscience.iop.org/article/10.1088/1741-2552/aacf45/meta
   type: journal
-  selected: false
+  selected: []
   citations: 45
+  featured: []
 - title: Removal of perineuronal nets unlocks juvenile plasticity through network
     mechanisms of decreased inhibition and increased gamma activity
   authors:
@@ -508,8 +580,9 @@
   venue: Journal of Neuroscience
   year: 2017
   type: journal
-  selected: false
+  selected: []
   citations: 353
+  featured: []
 - title: Temporal processing in the visual cortex of the awake and anesthetized rat
   authors:
   - Ida EJ Aasebø
@@ -522,8 +595,9 @@
   venue: eNeuro
   year: 2017
   type: journal
-  selected: false
+  selected: []
   citations: 32
+  featured: []
 - title: On the role of input-specific perturbations of medial septal projections
     to the grid cell network
   authors:
@@ -539,8 +613,9 @@
   year: 2017
   url: https://scholar.google.com/scholar?cluster=6186713089047091021&hl=en&oi=scholarr
   type: abstract
-  selected: false
+  selected: []
   citations: 0
+  featured: []
 - title: Doppler effects of an oscillating line source in shear flow with a free surface
   authors:
   - Peder A. Tyvand
@@ -548,8 +623,9 @@
   venue: Wave Motion
   year: 2015
   type: journal
-  selected: false
+  selected: []
   citations: 8
+  featured: []
 - title: Oscillatory line source for water waves in shear flow
   authors:
   - Peder A. Tyvand
@@ -557,8 +633,9 @@
   venue: Wave Motion
   year: 2014
   type: journal
-  selected: false
+  selected: []
   citations: 12
+  featured: []
 - title: Numerical stability of a scalar neural-field model with a sigmoidal firing-rate
     function
   authors:
@@ -567,8 +644,9 @@
   year: 2014
   url: ''
   type: abstract
-  selected: false
+  selected: []
   citations: 0
+  featured: []
 - title: 'The distributed neocortex: How neuroscience can inspire distributed AI systems'
   authors:
   - Mia-Katrin Kvalsund
@@ -580,5 +658,6 @@
   year: null
   url: https://web-backend.simula.no/sites/default/files/2023-10/3-Kvalsund.pdf
   type: abstract
-  selected: false
+  selected: []
   citations: 0
+  featured: []

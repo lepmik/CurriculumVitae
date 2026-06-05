@@ -28,6 +28,7 @@ OUTPUT_DIR = REPO_ROOT / "output"
 # Key: template name. Value: dict with format ('pdf' | 'html') and any extra config.
 TEMPLATES: dict[str, dict] = {
     "rcn": {"format": "pdf", "entry": "template.tex.j2"},
+    "earlycareer": {"format": "pdf", "entry": "template.tex.j2"},
     "classic": {"format": "pdf", "entry": "template.tex.j2"},
     "industry": {"format": "pdf", "entry": "template.tex.j2"},
     "html": {"format": "html", "entry": "template.html.j2"},
@@ -81,6 +82,38 @@ def load_data() -> dict:
         if pub.get("citations") is None:
             pub["citations"] = 0
 
+        # Flatten group: {rcn: causal} → rcn_group=causal (and any future CV keys)
+        if isinstance(pub.get("group"), dict):
+            for cv, val in pub["group"].items():
+                pub[f"{cv}_group"] = val   # e.g. rcn_group = "causal"
+        elif pub.get("group"):             # legacy plain string — keep working
+            pub["rcn_group"] = pub["group"]
+
+        # Flatten num: {rcn: 8} → rcn_num=8
+        if isinstance(pub.get("num"), dict):
+            for cv, val in pub["num"].items():
+                pub[f"{cv}_num"] = val     # e.g. rcn_num = 8
+
+        # Flatten featured: [earlycareer, rcn] → featured_earlycareer=True, featured=True
+        feat = pub.get("featured")
+        if isinstance(feat, list):
+            for cv in feat:
+                pub[f"featured_{cv}"] = True
+            pub["featured"] = bool(feat)  # truthy for any-CV featured
+        # (bool valued featured stays as-is for backward compat)
+
+        # Flatten selected: [rcn] → selected_rcn=True, selected=True
+        sel = pub.get("selected")
+        if isinstance(sel, list):
+            for cv in sel:
+                pub[f"selected_{cv}"] = True
+            pub["selected"] = bool(sel)
+
+        # Ensure per-CV flags always exist so Jinja2 selectattr never hits UndefinedError
+        pub.setdefault("featured_earlycareer", False)
+        pub.setdefault("featured_rcn", False)
+        pub.setdefault("selected_rcn", False)
+
     # Auto-derive supervision_institutions from unique institutions in supervision.yaml
     # Format: "Institution A / Institution B, Country" — stays in sync automatically.
     sup = ctx.get("supervision", {})
@@ -111,13 +144,116 @@ def load_data() -> dict:
             return f"[{citekey_map[key]}]" if key in citekey_map else m.group(0)
         return _re.sub(r"\[([A-Za-z][A-Za-z0-9_]*)\]", _sub, text)
 
-    def _resolve_obj(obj):
+    # Build EC citekey → EC-enumerate position map.
+    # Groups are rendered in the same order as the earlycareer template enumerate.
+    _ec_group_order = ["nca", "spatial_nav", "causal", "neuroscience"]
+    _ec_pubs: list[dict] = []
+    for _grp in _ec_group_order:
+        _grp_pubs = [
+            p for p in ctx.get("publications", [])
+            if p.get("featured_earlycareer") and p.get("rcn_group") == _grp
+        ]
+        _grp_pubs.sort(key=lambda p: p.get("rcn_num", 0))
+        _ec_pubs.extend(_grp_pubs)
+    ec_citekey_map: dict[str, int] = {
+        p["citekey"]: i + 1
+        for i, p in enumerate(_ec_pubs)
+        if p.get("citekey")
+    }
+
+    def _resolve_ec(text: str) -> str:
+        """Replace [citekey] with EC enumerate position; fall back to rcn_num."""
+        def _sub(m: "re.Match") -> str:
+            key = m.group(1)
+            if key in ec_citekey_map:
+                return f"[{ec_citekey_map[key]}]"
+            if key in citekey_map:
+                return f"[{citekey_map[key]}]"
+            return m.group(0)
+        return _re.sub(r"\[([A-Za-z][A-Za-z0-9_]*)\]", _sub, text)
+
+    def _resolve_obj(obj, *, ec: bool = False):
+        resolver = _resolve_ec if ec else _resolve
         if isinstance(obj, str):
-            return _resolve(obj)
+            return resolver(obj)
         if isinstance(obj, dict):
-            return {k: _resolve_obj(v) for k, v in obj.items()}
+            return {k: _resolve_obj(v, ec=(ec or k.startswith("ec_"))) for k, v in obj.items()}
         if isinstance(obj, list):
-            return [_resolve_obj(i) for i in obj]
+            return [_resolve_obj(i, ec=ec) for i in obj]
+        return obj
+
+    # ── Computed stats dict available as {stats.xxx} in narrative strings ──────
+    _pubs = ctx.get("publications", [])
+    _journals = [p for p in _pubs if p.get("type") == "journal"]
+    _confs    = [p for p in _pubs if p.get("type") == "conference"]
+    _preprints= [p for p in _pubs if p.get("type") == "preprint"]
+    _sc = ctx.get("scholar_stats") or {}
+    ctx["stats"] = {
+        "pub_count":      len(_journals) + len(_confs),
+        "journal_count":  len(_journals),
+        "conf_count":     len(_confs),
+        "preprint_count": len(_preprints),
+        "h_index":        _sc.get("h_index", ""),
+        "total_citations":_sc.get("total_citations", ""),
+        "fetched_date":   _sc.get("fetched_date", ""),
+    }
+
+    # Build citekey → pub map for {citekey.field} lookups
+    _ck_pub_map: dict[str, dict] = {
+        p["citekey"]: p for p in _pubs if p.get("citekey")
+    }
+
+    def _resolve_ctx_vars(text: str) -> str:
+        """Replace {key.subkey} or {key} with values from the build context.
+
+        Resolution order:
+          1. ctx[key][subkey]  (e.g. {scholar_stats.h_index}, {stats.pub_count})
+          2. citekey_pub[key][subkey]  (e.g. {sensor_nca.citations})
+          3. Leave unchanged if not found.
+
+        Uses a strict identifier pattern so LaTeX braces with spaces or special
+        characters (\\textbf{…}, \\href{…}) are never accidentally matched.
+        """
+        def _sub(m: "re.Match") -> str:
+            expr = m.group(1)
+            parts = expr.split(".", 1)
+            top_key = parts[0]
+            sub_key = parts[1] if len(parts) == 2 else None
+
+            # 1. Context dict lookup
+            top_val = ctx.get(top_key)
+            if top_val is not None:
+                if sub_key is None:
+                    return str(top_val)
+                if isinstance(top_val, dict):
+                    v = top_val.get(sub_key)
+                    if v is not None:
+                        return str(v)
+
+            # 2. Per-publication field lookup (e.g. {sensor_nca.citations})
+            if top_key in _ck_pub_map and sub_key:
+                v = _ck_pub_map[top_key].get(sub_key)
+                if v is not None:
+                    return str(v)
+
+            return m.group(0)  # leave unchanged
+
+        # Pattern: {identifier} or {identifier.identifier}
+        # Requires the content to be a dotted alphanumeric identifier (no spaces)
+        return _re.sub(r"\{([A-Za-z][A-Za-z0-9_]*(?:\.[A-Za-z][A-Za-z0-9_]*)?)\}", _sub, text)
+
+    def _resolve_all(text: str, *, ec: bool = False) -> str:
+        """Apply citekey resolution then context-variable resolution."""
+        text = (_resolve_ec if ec else _resolve)(text)
+        return _resolve_ctx_vars(text)
+
+    def _resolve_obj(obj, *, ec: bool = False):  # noqa: F811 (redefine intentional)
+        if isinstance(obj, str):
+            return _resolve_all(obj, ec=ec)
+        if isinstance(obj, dict):
+            return {k: _resolve_obj(v, ec=(ec or k.startswith("ec_"))) for k, v in obj.items()}
+        if isinstance(obj, list):
+            return [_resolve_obj(i, ec=ec) for i in obj]
         return obj
 
     ctx["narrative"] = _resolve_obj(ctx.get("narrative", {}))

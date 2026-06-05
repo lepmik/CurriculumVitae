@@ -1,8 +1,10 @@
 # Major collaborations
 - start: "2023"
   end: "present"
+  institution: "Simula Research Laboratory"
   description: "Deep learning for drug discovery using heart on a chip"
   collaborators: "Prof. Aslak Tveito, Research Prof. Samuel Wall and Research Prof. Andy Edwards"
+  role: "co-principal-investigator and co-author"
 
 - start: "2023"
   end: "2023"

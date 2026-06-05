@@ -3,31 +3,41 @@
 # Curated to the 10 most impactful entries — newest first
 
 - year: "2024"
+  category: meeting_org
   description: "4-day NeuroAI workshop on MS Hurtigruten, 20 invited international speakers (USA, EU, Norway), main organizer"
 
 - year: "2024"
+  category: institutional
   description: "Selected for the AI task force at Simula, contributing to Simula's institution-wide AI strategy"
 
 - year: "2023--2024"
+  category: trust
   description: "Review Editor, Frontiers in Computational Neuroscience and Computational Physiology"
 
 - year: "2023--2024"
+  category: meeting_org
   description: "3 NeuroAI consortium workshops connecting national and international labs, 20--30 participants each, co-organizer"
 
 - year: "2023"
+  category: meeting_org
   description: "Strategic AI \\& Ethics seminar for Simula (40 participants), contributed talk and panel discussion, co-organizer"
 
 - year: "2022"
+  category: institutional
   description: "Selected to Simula's ERC Incubator support programme for ERC Starting Grant candidates"
 
 - year: "2022"
+  category: institutional
   description: "Establishing NeuroAI as a focus field in the Ministry of Education \\& Research -- US Department of Energy collaboration, lead role"
 
 - year: "2022"
+  category: other
   description: "Intensive leadership course: ``High-Potential Leaders: Accelerating Your Impact'', Wharton Executive Education"
 
 - year: "2018"
+  category: other
   description: "Invited software developer at NWB Hackathon, Howard Hughes Medical Institute; developed Exdir backend for Neuro Data Without Borders"
 
 - year: "2017--"
+  category: trust
   description: "Peer reviewer for PLOS Computational Biology, Nature Machine Intelligence, eNeuro, Journal of Neural Engineering"

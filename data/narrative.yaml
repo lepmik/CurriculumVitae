@@ -37,8 +37,9 @@ career_breaks:
 track_record_intro: >
   My research bridges neuroscience and AI in both directions: using principles of brain function
   to build better AI systems, and using AI to deepen our understanding of neural computation.
-  I have published \textbf{26 peer-reviewed articles} (727 total citations, h-index 10, Google Scholar
-  2026), including in NeurIPS, Nature Communications, Science Advances, eLife, PLOS Computational
+  I have published \textbf{{stats.pub_count} peer-reviewed articles} ({stats.total_citations} total
+  citations, h-index {stats.h_index}, Google Scholar {stats.fetched_date}),
+  including in NeurIPS, Nature Communications, Science Advances, eLife, PLOS Computational
   Biology, and iScience. Since 2020 I have founded and led the BioAI group at Simula Research
   Laboratory, growing it to 11 researchers (1 postdoc, 10 PhD students) and managing a portfolio
   of $\sim$4.5\,MNOK/year. I received the \textbf{NORA Early Career Investigator Award in AI 2025}.
@@ -57,12 +58,12 @@ pub_narrative_spatial_nav: >
   We showed that grid-cell geometry is governed by conformal isometry [schoyen2025] (PLOS CB),
   that place cells and contextual remapping emerge from decoding a cognitive map [pettersen2024_elife]
   (eLife), and that toroidal topology -- not grid cells per se -- drives coherent remapping
-  [schoyen2023] (iScience, 24 cit.). Collectively these works establish a unified
+  [schoyen2023] (iScience, {schoyen2023.citations} cit.). Collectively these works establish a unified
   computational framework for how the brain encodes space.
 
 pub_narrative_causal: >
   Beginning in 2018 with Konrad Kording I developed quasi-experimental methods for causal
-  inference in neuroscience [lepperoD2022_causal] (PLOS CB, 25 cit.). This method was
+  inference in neuroscience [lepperoD2022_causal] (PLOS CB, {lepperoD2022_causal.citations} cit.). This method was
   directly adopted by Pospisil et al.\ (2024) to map the fruit-fly brain effectome
   (\textit{Nature}, V\,634, P\,201--209), demonstrating the real-world translational impact
   of the methodology.
@@ -70,10 +71,10 @@ pub_narrative_causal: >
 pub_narrative_neuroscience: >
   During my PhD I combined in-vivo electrophysiology with computational methods to make
   two high-impact contributions to systems neuroscience. Perineuronal nets stabilize the
-  grid cell network [christensen2021] (\textit{Nature Communications}, 94 cit.), identifying
+  grid cell network [christensen2021] (\textit{Nature Communications}, {christensen2021.citations} cit.), identifying
   a structural plasticity mechanism for spatial memory. Optogenetic pacing of medial septum
   parvalbumin cells disrupts hippocampal theta oscillations [lepperoD2021_optogenetic]
-  (\textit{Science Advances}, 23 cit.), establishing a causal link between septal drive and
+  (\textit{Science Advances}, {lepperoD2021_optogenetic.citations} cit.), establishing a causal link between septal drive and
   network-level temporal coding.
 
 other_qualifications: >
@@ -90,8 +91,100 @@ other_qualifications: >
   lecturer in \textit{Computing in Biological Sciences} (UiO, 2015--2020, 25\% FTE).
 
 public_outreach: >
-  Interviewed on MLST podcast on ARC-NCA; Research profile interview by
-  Titan.uio.no (cross-posted digi.no); Two J\o{}ss podcast appearances
-  (${\sim}$4000 listeners); Opinion editorial on AI ethics (digi.no);
-  Interview NRK on optogenetics and depression; Two episodes Brain Inspired
-  podcast (2024).
+  (2025) Interviewed on the Machine Learning Street Talk (MLST) podcast on ARC-NCA;
+  (2025) Published opinion piece on \href{https://www.digi.no/artikler/debatt-na-bygger-ki-systemer-ekstremt-presise-psykologiske-profiler-av-oss/559157}{digi.no};
+  (2025) Published at \href{https://www.forskning.no/hjernen-kunstig-intelligens-partner/hvordan-forstar-hjernen-hvor-vi-er/2515166}{forskning.no} on recent NeurIPS work;
+  (2024) Two episodes on the Brain Inspired podcast
+  (\href{https://braininspired.co/podcast/195/}{ep.\,195},
+  \href{https://braininspired.co/podcast/196/}{ep.\,196}),
+  cross-broadcast on the Theoretical Neuroscience podcast
+  (\href{https://theoreticalneuroscience.no/thn19/}{THN19},
+  \href{https://theoreticalneuroscience.no/thn20/}{THN20});
+  (2024) Interviewed by Titan.uio.no, cross-posted including
+  \href{https://www.digi.no/artikler/hjerneforskning-vil-gi-oss-bedre-kunstig-intelligens/540859}{digi.no};
+  (2024) Two appearances in the J\o{}ss podcast ($\sim$4000 monthly listeners);
+  (2024) Opinion editorial on ethics in AI,
+  \href{https://www.digi.no/artikler/debatt-norge-som-fanebaerer-for-etikk-i-en-uforutsigbar-framtid/541427}{digi.no};
+  (2021) Interview with NRK on optogenetics as a treatment for depression,
+  \href{https://www.nrk.no/dokumentar/xl/laseren-som-kan-lose-depresjonsgaten-1.13586886}{nrk.no}.
+
+# ── Early Career CV ───────────────────────────────────────────────────────────
+
+doctoral_defence_date: "21.10.2020"
+
+# ── Early Career publication narratives (numbered [1]-[5] to match EC enumerate) ─
+# EC numbering: [1] sensor_nca, [2] arc_nca, [3] schoyen2023, [4] lepperoD2022_causal, [5] christensen2021
+
+ec_track_record_intro: >
+  My research bridges neuroscience and AI in both directions: using principles of brain function
+  to build better AI systems, and using AI to deepen our understanding of neural computation.
+  I have published \textbf{{stats.pub_count} peer-reviewed articles} ({stats.total_citations} total
+  citations, h-index {stats.h_index}, Google Scholar {stats.fetched_date}),
+  including in NeurIPS, Nature Communications, Science Advances, eLife, PLOS Computational
+  Biology, and iScience. Since 2020 I have founded and led the BioAI group at Simula Research
+  Laboratory, growing it to 11 researchers (1 postdoc, 10 PhD students) and managing a portfolio
+  of $\sim$4.5\,MNOK/year. I received the \textbf{NORA Early Career Investigator Award in AI 2025}.
+  Four MSc alumni have gone on to PhD programmes at Simula, the University of Oslo, and Stanford.
+
+ec_pub_narrative_nca: >
+  I have developed Neural Cellular Automata (NCAs) inspired by principles of brain function.
+  This work includes the discovery of emergent attention and scalability in active sensing NCAs [sensor_nca],
+  and developmental solutions for abstract reasoning using ARC-NCA [arc_nca].
+  [arc_nca] was featured on the Machine Learning Street Talk (MLST) podcast.
+
+ec_pub_narrative_spatial_nav: >
+  A central focus of the BioAI group has been AI models of spatial navigation.
+  We showed that toroidal topology---not individual grid cells---drives coherent
+  remapping [schoyen2023] (iScience, {schoyen2023.citations} cit.), establishing a topological diagnostic for
+  how the brain encodes space.
+
+ec_pub_narrative_causal: >
+  Beginning in 2018 in collaboration with Konrad Kording I developed quasi-experimental
+  methods for causal inference in neural circuits [lepperoD2022_causal] (PLOS CB, {lepperoD2022_causal.citations} cit.). The method was
+  directly adopted by Pospisil et al.\ (2024) to map the fruit-fly brain effectome
+  (\textit{Nature}, V\,634, P\,201--209), demonstrating its translational impact.
+
+ec_pub_narrative_neuroscience: >
+  During my PhD I combined in-vivo electrophysiology with computational methods.
+  Perineuronal nets stabilize the grid cell network [christensen2021] (\textit{Nature Communications},
+  {christensen2021.citations} cit.), identifying a structural plasticity mechanism for spatial memory.
+
+
+# Items 3-8 of the early achievements track record (leave blank if not applicable)
+early_career_monographs: ""          # 3. Research monographs / translations
+
+early_career_patents: ""             # 4. Granted patents
+
+early_career_innovation: >           # 5. Leadership/participation in innovation or societal impact
+  Established NeuroAI as a focus area in the collaboration between the Norwegian Ministry of
+  Education and Research and the US Department of Energy. Co-developed the SURE-AI national
+  AI centre (NOK\,$\sim$200M). Selected to Simula's ERC Incubator programme. Core developer
+  of three open-source neuroscience data-management tools (expipe, exdir, pyopenephys) adopted
+  across multiple international labs and used in the Human Brain Project (NEST 2.12/2.16).
+  NORA Early Career Investigator Award in AI 2025.
+
+early_career_fieldwork: ""           # 6. Leadership of field work / research expeditions
+
+early_career_invited_talks: >        # 7. Invited presentations at peer-reviewed conferences / advanced schools
+  NeuroAI Symposium, Kavli Institute (2024); Cognitive Computational Neuroscience (CCN, 2023);
+  NaiSYS (2023); Norwegian Neuroscience Society (2023); Machine Learning Street Talk podcast
+  (2024, 4000+ listeners, top-ranked technical AI podcast); Brain Inspired podcast (2024, 2
+  episodes); Simula Summer School in Computational Physiology (invited lecturer, 2022--2023).
+
+early_career_outreach: >             # 8. Research communication, dissemination, outreach
+  (2025) Interviewed on the Machine Learning Street Talk (MLST) podcast on ARC-NCA;
+  (2025) Published opinion piece on \href{https://www.digi.no/artikler/debatt-na-bygger-ki-systemer-ekstremt-presise-psykologiske-profiler-av-oss/559157}{digi.no};
+  (2025) Published at \href{https://www.forskning.no/hjernen-kunstig-intelligens-partner/hvordan-forstar-hjernen-hvor-vi-er/2515166}{forskning.no} on recent NeurIPS work;
+  (2024) Two episodes on the Brain Inspired podcast
+  (\href{https://braininspired.co/podcast/195/}{ep.\,195},
+  \href{https://braininspired.co/podcast/196/}{ep.\,196}),
+  cross-broadcast on the Theoretical Neuroscience podcast
+  (\href{https://theoreticalneuroscience.no/thn19/}{THN19},
+  \href{https://theoreticalneuroscience.no/thn20/}{THN20});
+  (2024) Interviewed by Titan.uio.no, cross-posted including
+  \href{https://www.digi.no/artikler/hjerneforskning-vil-gi-oss-bedre-kunstig-intelligens/540859}{digi.no};
+  (2024) Two appearances in the J\o{}ss podcast ($\sim$4000 monthly listeners);
+  (2024) Opinion editorial on ethics in AI,
+  \href{https://www.digi.no/artikler/debatt-norge-som-fanebaerer-for-etikk-i-en-uforutsigbar-framtid/541427}{digi.no};
+  (2021) Interview with NRK on optogenetics as a treatment for depression,
+  \href{https://www.nrk.no/dokumentar/xl/laseren-som-kan-lose-depresjonsgaten-1.13586886}{nrk.no}.

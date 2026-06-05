@@ -23,7 +23,7 @@ Project participant $\square$
 
 \begin{rcninfo}
   First name, Surname: & \VAR{profile.name} \\\hline
-  Date of birth:\quad \VAR{profile.date_of_birth | default('')} \hfill Sex:\quad Male & \\\hline
+  \multicolumn{2}{|l|}{Date of birth:\quad \VAR{profile.date_of_birth | default('')} \hfill Sex:\quad Male} \\\hline
   Nationality: & \VAR{profile.nationality} \\\hline
   Researcher unique identifier(s) (ORCID, ResearcherID, etc.): & \VAR{profile.orcid} \\\hline
   URL for personal website: &
@@ -140,7 +140,7 @@ Project participant $\square$
 \begin{rcntable}{Year}{Description, Role}
 \BLOCK{ for c in collaborations }
   \VAR{c.start}\BLOCK{ if c.end and c.end not in ['present', ''] }--\VAR{c.end}\BLOCK{ elif c.end == 'present' }--\BLOCK{ endif } &
-  \VAR{c.description}, \VAR{c.collaborators}\BLOCK{ if c.get('role') }, \textit{\VAR{c.role}}\BLOCK{ endif } \\\hline
+  \BLOCK{ if c.get('institution') }\VAR{c.institution}, \BLOCK{ endif }\VAR{c.description}, \VAR{c.collaborators}\BLOCK{ if c.get('role') }, \textit{\VAR{c.role}}\BLOCK{ endif } \\\hline
 \BLOCK{ endfor }
 \end{rcntable}
 
@@ -230,13 +230,6 @@ including in high-ranked venues such as NeurIPS, Nature Communications, Science 
 
 \noindent\textbf{Public Outreach (selected):} \VAR{narrative.public_outreach}
 }
-
-% ── References ────────────────────────────────────────────────────────────────
-\section*{References}
-
-\BLOCK{ for ref in references }
-\VAR{ref.name}, \VAR{ref.title}, \VAR{ref.institution}: \href{mailto:\VAR{ref.email}}{\VAR{ref.email}}\BLOCK{ if ref.get('phone') }, \VAR{ref.phone}\BLOCK{ endif }\\
-\BLOCK{ endfor }
 
 \vfill
 \begin{flushright}\tiny Generated \VAR{build_date}\end{flushright}
