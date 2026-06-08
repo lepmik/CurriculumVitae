@@ -37,10 +37,7 @@ career_breaks:
 track_record_intro: >
   My research bridges neuroscience and AI in both directions: using principles of brain function
   to build better AI systems, and using AI to deepen our understanding of neural computation.
-  I have published \textbf{{stats.pub_count} peer-reviewed articles} ({stats.total_citations} total
-  citations, h-index {stats.h_index}, Google Scholar {stats.fetched_date}),
-  including in NeurIPS, Nature Communications, Science Advances, eLife, PLOS Computational
-  Biology, and iScience. Since 2020 I have founded and led the BioAI group at Simula Research
+  Since 2020 I have founded and led the BioAI group at Simula Research
   Laboratory, growing it to 11 researchers (1 postdoc, 10 PhD students) and managing a portfolio
   of $\sim$4.5\,MNOK/year. I received the \textbf{NORA Early Career Investigator Award in AI 2025}.
   I have actively mentored the next generation: four MSc alumni have gone on to PhD programmes
@@ -118,10 +115,7 @@ doctoral_defence_date: "21.10.2020"
 ec_track_record_intro: >
   My research bridges neuroscience and AI in both directions: using principles of brain function
   to build better AI systems, and using AI to deepen our understanding of neural computation.
-  I have published \textbf{{stats.pub_count} peer-reviewed articles} ({stats.total_citations} total
-  citations, h-index {stats.h_index}, Google Scholar {stats.fetched_date}),
-  including in NeurIPS, Nature Communications, Science Advances, eLife, PLOS Computational
-  Biology, and iScience. Since 2020 I have founded and led the BioAI group at Simula Research
+  Since 2020 I have founded and led the BioAI group at Simula Research
   Laboratory, growing it to 11 researchers (1 postdoc, 10 PhD students) and managing a portfolio
   of $\sim$4.5\,MNOK/year. I received the \textbf{NORA Early Career Investigator Award in AI 2025}.
   Four MSc alumni have gone on to PhD programmes at Simula, the University of Oslo, and Stanford.
