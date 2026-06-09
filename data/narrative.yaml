@@ -120,6 +120,15 @@ ec_track_record_intro: >
   of $\sim$4.5\,MNOK/year. I received the \textbf{NORA Early Career Investigator Award in AI 2025}.
   Four MSc alumni have gone on to PhD programmes at Simula, the University of Oslo, and Stanford.
 
+ec_research_vision: >
+  My overarching goal is to understand the computational principles that make biological neural
+  systems so efficient at building and using internal world models --- and to translate those
+  principles into AI that generalises more robustly, reasons more transparently, and remains
+  interpretable under deployment. The brain solves problems that state-of-the-art AI cannot:
+  it navigates novel environments from sparse experience, adapts representations on-the-fly,
+  and does so in a fault-tolerant, energy-efficient substrate. My research programme treats
+  these capabilities not as metaphors but as engineering targets.
+
 ec_pub_narrative_nca: >
   I have developed Neural Cellular Automata (NCAs) inspired by principles of brain function.
   This work includes the discovery of emergent attention and scalability in active sensing NCAs [sensor_nca],

@@ -205,6 +205,71 @@ In addition, I have \textbf{\VAR{preprints|length}} preprints currently under re
 
 \VAR{narrative.ec_track_record_intro}
 
+\BLOCK{ if scholar_stats and scholar_stats.get('citations_by_year') }
+\bigskip
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+  ybar,
+  bar width        = 9pt,
+  width            = 0.72\linewidth,
+  height           = 4.2cm,
+  enlarge x limits = 0.08,
+  axis x line*     = bottom,
+  axis y line*     = left,
+  tick style       = {line width=0.4pt, color=black},
+  xlabel style     = {font=\small},
+  ylabel style     = {font=\small},
+  yticklabel style = {font=\small},
+  xticklabel style = {font=\small, rotate=45, anchor=east},
+  ylabel           = {Citations},
+  xtick            = data,
+  symbolic x coords= {\BLOCK{ for y in scholar_stats.citations_by_year }\VAR{y.year}\BLOCK{ if not loop.last },\BLOCK{ endif }\BLOCK{ endfor }},
+  nodes near coords,
+  nodes near coords style = {font=\tiny, inner sep=1pt},
+  every node near coord/.append style={/pgf/number format/fixed},
+  ymajorgrids      = true,
+  grid style       = {dotted, gray!50},
+  axis background/.style = {fill=white},
+  clip             = false,
+]
+%% Full years
+\addplot[
+  fill  = {rgb,255:red,31;green,73;blue,125},
+  draw  = {rgb,255:red,20;green,50;blue,90},
+] coordinates {
+  \BLOCK{ for y in scholar_stats.citations_by_year }
+  \BLOCK{ if not y.partial }(\VAR{y.year}, \VAR{y.count})\BLOCK{ endif }
+  \BLOCK{ endfor }
+};
+%% Partial year (hatched)
+\addplot[
+  fill        = {rgb,255:red,31;green,73;blue,125},
+  draw        = {rgb,255:red,20;green,50;blue,90},
+  fill opacity= 0.35,
+  postaction  = {pattern=north east lines, pattern color={rgb,255:red,31;green,73;blue,125}},
+] coordinates {
+  \BLOCK{ for y in scholar_stats.citations_by_year }
+  \BLOCK{ if y.partial }(\VAR{y.year}, \VAR{y.count})\BLOCK{ endif }
+  \BLOCK{ endfor }
+};
+\end{axis}
+\end{tikzpicture}
+\quad
+\begin{minipage}[b]{0.24\linewidth}\small\raggedright
+  \textbf{Citation growth}\\[3pt]
+  Total: \textbf{\VAR{scholar_stats.total_citations}}\\
+  h-index: \textbf{\VAR{scholar_stats.h_index}}\\[4pt]
+  {\tiny Hatched bar = partial year.\\Source: Google Scholar \VAR{scholar_stats.fetched_date}.}
+\end{minipage}
+\end{center}
+\BLOCK{ endif }
+
+\BLOCK{ if narrative.get('ec_research_vision') }
+\subsubsection*{Research vision}
+
+\VAR{narrative.ec_research_vision}
+\BLOCK{ endif }
 
 \BLOCK{ if nca_feat }
 \subsubsection*{Selected publications: Neural cellular automata (NCA)}

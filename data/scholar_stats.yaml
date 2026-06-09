@@ -2,3 +2,12 @@ total_citations: 727
 h_index: 10
 i10_index: 11
 fetched_date: '2026-06-04'
+citations_by_year:
+  - {year: 2019, count: 51,  partial: false}
+  - {year: 2020, count: 51,  partial: false}
+  - {year: 2021, count: 80,  partial: false}
+  - {year: 2022, count: 89,  partial: false}
+  - {year: 2023, count: 96,  partial: false}
+  - {year: 2024, count: 107, partial: false}
+  - {year: 2025, count: 126, partial: false}
+  - {year: 2026, count: 56,  partial: true}
